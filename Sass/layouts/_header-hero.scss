@@ -1,0 +1,18 @@
+.hero {
+  margin: 39px auto 57px;
+  background-color: $bg-color;
+
+  &__title {
+    font-family: $font-bold;
+    font-size: 1.5rem;
+    height: 68px;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &__desc {
+    font-family: $font-light;
+    font-size: 1.125rem;
+    margin-bottom: 27px;
+  }
+}

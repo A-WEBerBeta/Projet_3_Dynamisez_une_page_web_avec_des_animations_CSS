@@ -1,0 +1,60 @@
+.operation {
+  background-color: white;
+  height: 440px;
+  padding: 48px 20px 68px;
+  text-align: left;
+
+  &__title {
+    font-family: $font-bold;
+    font-weight: 1.5rem;
+    margin-bottom: 26px;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    max-width: 335px;
+    margin-bottom: 25px;
+
+    .operation__number {
+      background-color: $primary-color;
+      font-family: $font-medium;
+      font-size: 0.9rem;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .operation__desc {
+      background-color: $bg-color;
+      border-radius: 20px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: -12px;
+      flex: 1;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+      .operation__icon {
+        color: #7e7e7e;
+        margin-right: 24px;
+        font-size: 1.2rem;
+
+        &--primary {
+          color: $primary-color;
+        }
+      }
+
+      .operation__text {
+        font-family: $font-medium;
+        width: 211px;
+      }
+    }
+  }
+}
