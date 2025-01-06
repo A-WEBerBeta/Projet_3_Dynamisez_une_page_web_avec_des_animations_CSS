@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="/Sass/style.css">
   <!-- **** fontawesome **** -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" >
-
+  <!-- **** css **** -->
+   <link rel="stylesheet" href="./Sass/index.css">
 </head>
 <body>
 
@@ -16,19 +17,16 @@
      <div class="header">
       <a href="#index.html"><h1 class="header__logo">ohmyfood</h1></a>
      </div>
+     <!-- **** Localisation **** -->
+     <div class="header__location">
+       <div class="location__icon">
+         <i class="fa-solid fa-location-dot"></i>
+       </div>
+       <p class="location__search">Paris, Belleville</p>
+     </div>
   </header>
 
   <main>
-    <!-- **** Localisation **** -->
-    <div class="location">
-      <div class="location__icon">
-        <i class="fa-solid fa-location-dot"></i>
-      </div>
-      <form>
-        <input type="text" class="location__search" placeholder="Entrez votre ville" value="Paris, Belleville">
-      </form>
-    </div>
-
     <!-- **** Header Hero **** -->
     <section class="hero">
         <h2 class="hero__title">Réservez le menu qui vous convient</h2>
