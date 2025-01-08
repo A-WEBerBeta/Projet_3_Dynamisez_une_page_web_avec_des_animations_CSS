@@ -1,6 +1,7 @@
 .header__logo {
   font-family: $font-title;
   font-size: 1.875rem;
+  font-weight: inherit;
   width: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 14px 0 5px;
@@ -23,8 +24,3 @@
     border: none;
   }
 }
-
-img {
-  width: 100%;
-}
-// *** penser à enlever cette prop une fois les card codées !! ***

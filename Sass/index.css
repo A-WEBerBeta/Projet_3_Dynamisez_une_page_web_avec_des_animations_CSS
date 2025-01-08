@@ -14,6 +14,10 @@
   font-family: "Roboto-Bold";
   src: url(/Assets/fonts/Roboto-Bold.ttf);
 }
+@font-face {
+  font-family: "Roboto";
+  src: url(/Assets/fonts/Roboto-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +35,7 @@ a {
 }
 
 body {
+  font-family: Roboto, sans-serif;
   text-align: center;
   background-color: #f6f6f6;
 }
@@ -38,6 +43,7 @@ body {
 .header__logo {
   font-family: Shrikhand;
   font-size: 1.875rem;
+  font-weight: inherit;
   width: 100%;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -67,10 +73,6 @@ body {
 .header__location .location__search {
   font-family: Roboto-Medium;
   border: none;
-}
-
-img {
-  width: 100%;
 }
 
 .hero {
@@ -163,6 +165,149 @@ img {
   width: 211px;
 }
 
+.restaurants__title {
+  font-family: Roboto-Bold;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 54px;
+  margin-bottom: 24px;
+}
+
+.restaurant__card {
+  height: 251px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 18px;
+}
+.restaurant__card .restaurant__card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+}
+.restaurant__card .restaurant__card-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant__card .restaurant__card-image #center-img {
+  -o-object-position: center;
+     object-position: center; /* comment faire pour positionner l'image comme sur la maquette ? */
+}
+.restaurant__card .restaurant__card-image .restaurant__card-new {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  bottom: 132px;
+  background-color: #99e2d0;
+  width: 80px;
+  height: 29px;
+  font-family: Roboto-Medium;
+  color: #008766;
+  font-size: 0.875rem;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurant__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  padding: 16px 25px 12px 13px;
+}
+.restaurant__container .heart-icon {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 7px;
+}
+
+.restaurant__desc-title {
+  font-family: Roboto-Bold;
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+}
+.restaurant__desc-location {
+  font-family: Roboto-Light;
+  font-size: 1.063rem;
+}
+
+.footer {
+  margin-top: 66px;
+  background-color: #353535;
+  text-align: left;
+  padding: 22px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.footer__title {
+  font-family: Shrikhand;
+  font-size: 1.125rem;
+  color: white;
+  font-weight: inherit;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+.footer__links .footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__links .footer__link i {
+  color: white;
+  font-size: 0.8rem;
+  position: absolute;
+}
+.footer__links .footer__link .link__title {
+  color: white;
+  font-family: Roboto-Medium;
+  padding-left: 22px;
+}
+.footer__links .footer__link .link__title--regular {
+  font-family: Roboto;
+  padding-left: 0;
+}
+
 .btn {
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
@@ -175,4 +320,8 @@ img {
   font-size: 1rem;
   -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.btn a {
+  color: white;
 }/*# sourceMappingURL=index.css.map */

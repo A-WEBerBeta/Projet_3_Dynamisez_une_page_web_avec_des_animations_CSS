@@ -1,0 +1,74 @@
+.restaurants__title {
+  font-family: $font-bold;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 54px;
+  margin-bottom: 24px;
+}
+
+.restaurant__card {
+  height: 251px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 18px;
+
+  .restaurant__card-image {
+    display: flex;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom;
+      border-radius: 15px 15px 0 0;
+    }
+
+    #center-img {
+      object-position: center; /* comment faire pour positionner l'image comme sur la maquette ? */
+    }
+
+    .restaurant__card-new {
+      position: absolute;
+      z-index: 2;
+      right: 15px;
+      bottom: 132px;
+      background-color: $tertiary-color;
+      width: 80px;
+      height: 29px;
+      font-family: $font-medium;
+      color: #008766;
+      font-size: 0.875rem;
+      border-radius: 2px;
+      @include centerChild;
+    }
+  }
+}
+
+.restaurant__container {
+  @include alignChildren(space-between);
+  text-align: left;
+  padding: 16px 25px 12px 13px;
+
+  .heart-icon {
+    align-self: flex-start;
+    padding-top: 7px;
+  }
+}
+
+.restaurant__desc {
+  &-title {
+    font-family: $font-bold;
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+  }
+
+  &-location {
+    font-family: $font-light;
+    font-size: 1.063rem;
+  }
+}
