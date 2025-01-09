@@ -23,6 +23,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-weight: inherit;
 }
 
 li {
@@ -43,11 +44,12 @@ body {
 .header__logo {
   font-family: Shrikhand;
   font-size: 1.875rem;
-  font-weight: inherit;
   width: 100%;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 14px 0 5px;
+  position: relative;
+  z-index: 2;
 }
 
 .header__location {
@@ -272,7 +274,6 @@ body {
   font-family: Shrikhand;
   font-size: 1.125rem;
   color: white;
-  font-weight: inherit;
 }
 
 .footer__links {

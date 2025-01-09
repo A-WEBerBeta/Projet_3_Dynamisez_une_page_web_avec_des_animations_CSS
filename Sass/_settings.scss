@@ -47,12 +47,18 @@ $tertiary-color: #99e2d0;
   justify-content: $space;
 }
 
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 // **** GENERAL ****
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: inherit;
 }
 
 li {

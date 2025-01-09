@@ -1,0 +1,111 @@
+.header__logo {
+  font-family: $font-title;
+  font-size: 1.875rem;
+  width: 100%;
+  padding: 14px 0 5px;
+  position: relative;
+}
+
+.header__return {
+  @include centerChild;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 30px;
+  height: 30px;
+  font-size: 1.3rem;
+  color: #353535;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.menu {
+  @include flexColumn;
+  gap: 40px;
+
+  &__container {
+    @include alignChildren(space-between);
+    gap: 40px;
+    padding: 0 17px;
+  }
+
+  &__restaurant {
+    font-family: $font-title;
+    font-size: 1.75rem;
+  }
+
+  svg {
+    @include centerChild;
+    position: absolute;
+    right: 41px;
+  }
+}
+
+.menu__content {
+  @include flexColumn;
+  text-align: left;
+  padding: 0 13px;
+  gap: 12px;
+
+  .menu__title {
+    font-family: $font-light;
+    text-transform: uppercase;
+    font-size: 1rem;
+    height: 27px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 40px;
+      height: 3px;
+      position: absolute;
+      background-color: $tertiary-color;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.menu__cards {
+  @include flexColumn;
+  gap: 12px;
+
+  a {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    @include alignChildren(space-between);
+  }
+}
+.menu__card {
+  .card__title {
+    font-family: $font-medium;
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+  }
+
+  .card__desc {
+    font-family: $font-light;
+    font-size: 0.94rem;
+  }
+}
+
+.menu__price {
+  font-family: $font-bold;
+  font-size: 0.94rem;
+  align-self: flex-end;
+}
+
+.btn {
+  max-width: 186px;
+  align-self: center;
+}
+
+body.la-palette-du-gout .footer {
+  margin-top: 40px;
+}
