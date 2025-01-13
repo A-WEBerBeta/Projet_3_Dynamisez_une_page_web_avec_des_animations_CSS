@@ -77,8 +77,42 @@ body {
   border: none;
 }
 
+@media screen and (min-width: 376px) {
+  .header__logo {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 96px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .header__location {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
 .hero {
   margin: 39px auto 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f6f6f6;
 }
 .hero__title {
@@ -94,6 +128,14 @@ body {
   margin-bottom: 27px;
 }
 
+@media screen and (min-width: 376px) {
+  .hero {
+    margin: 30px auto;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
 .operation {
   background-color: white;
   height: 440px;
@@ -167,6 +209,27 @@ body {
   width: 211px;
 }
 
+@media screen and (min-width: 376px) {
+  .operation {
+    padding: 50px 180px;
+    height: auto;
+  }
+  .operation__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .operation__step {
+    width: 335px;
+    margin: 0;
+  }
+}
 .restaurants__title {
   font-family: Roboto-Bold;
   font-size: 1.5rem;
@@ -243,19 +306,42 @@ body {
 .restaurant__container .restaurant__like {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding-top: 7px;
+  padding-top: 4px;
+  font-size: 1.375rem;
 }
 
 .restaurant__desc-title {
   font-family: Roboto-Bold;
   font-size: 1.125rem;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .restaurant__desc-location {
   font-family: Roboto-Light;
   font-size: 1.063rem;
 }
 
+@media screen and (min-width: 376px) {
+  .restaurants {
+    padding: 0 180px;
+  }
+  .restaurants__title {
+    margin: 30px 0;
+    padding: 0;
+  }
+  .restaurants__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
+  .restaurant__card {
+    margin: 0;
+    width: 100%;
+  }
+  .restaurant__card-image img {
+    -o-object-position: top;
+       object-position: top;
+  }
+}
 .footer {
   margin-top: 66px;
   background-color: #353535;
@@ -309,6 +395,33 @@ body {
   padding-left: 0;
 }
 
+@media screen and (min-width: 376px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 30px;
+    padding: 60px 26px 30px;
+    gap: 16px;
+  }
+  .footer__links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 7px;
+  }
+  .footer__title {
+    width: 139px;
+  }
+  .footer__link {
+    width: 190px;
+  }
+  .footer__link:nth-last-child(-n+2) {
+    width: 130px;
+  }
+}
 .btn {
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
@@ -347,4 +460,42 @@ body {
 }
 .btn a {
   color: white;
+}
+
+.restaurant__like {
+  position: relative;
+  display: inline-block;
+}
+.restaurant__like .heart-checkbox {
+  display: none;
+}
+.restaurant__like .heart-empty {
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+}
+.restaurant__like .heart-full {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+}
+.restaurant__like .heart-checkbox:checked + .heart-empty {
+  opacity: 0;
+}
+.restaurant__like .heart-checkbox:checked + .heart-empty + .heart-full {
+  opacity: 1;
+}
+.restaurant__like:hover .heart-empty {
+  opacity: 0;
+}
+.restaurant__like:hover .heart-full {
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

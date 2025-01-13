@@ -1,0 +1,43 @@
+.restaurant__like {
+  position: relative;
+  display: inline-block;
+
+  .heart-checkbox {
+    display: none;
+  }
+
+  .heart-empty {
+    transition-duration: 800ms;
+  }
+
+  .heart-full {
+    cursor: pointer;
+    background: linear-gradient($primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    opacity: 0;
+    transition: all 800ms ease-in-out;
+  }
+
+  .heart-checkbox:checked + .heart-empty {
+    opacity: 0;
+  }
+
+  .heart-checkbox:checked + .heart-empty + .heart-full {
+    opacity: 1;
+  }
+
+  &:hover {
+    .heart-empty {
+      opacity: 0;
+    }
+
+    .heart-full {
+      opacity: 1;
+    }
+  }
+}

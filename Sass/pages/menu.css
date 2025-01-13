@@ -97,12 +97,23 @@ body {
           justify-content: space-between;
   gap: 40px;
   padding: 0 17px;
+  position: relative;
+}
+.menu__container::before {
+  content: "";
+  width: 100%;
+  height: 32px;
+  background-color: #f6f6f6;
+  position: absolute;
+  left: 0;
+  top: -32px;
+  border-radius: 40px 40px 0 0;
 }
 .menu__restaurant {
   font-family: Shrikhand;
   font-size: 1.75rem;
 }
-.menu svg {
+.menu .restaurant__like {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,6 +123,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.375rem;
+  padding-top: 4px;
   position: absolute;
   right: 41px;
 }
@@ -290,4 +303,69 @@ body.la-palette-du-gout .footer {
 .footer__links .footer__link .link__title--regular {
   font-family: Roboto;
   padding-left: 0;
+}
+
+@media screen and (min-width: 376px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 30px;
+    padding: 60px 26px 30px;
+    gap: 16px;
+  }
+  .footer__links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 7px;
+  }
+  .footer__title {
+    width: 139px;
+  }
+  .footer__link {
+    width: 190px;
+  }
+  .footer__link:nth-last-child(-n+2) {
+    width: 130px;
+  }
+}
+.restaurant__like {
+  position: relative;
+  display: inline-block;
+}
+.restaurant__like .heart-checkbox {
+  display: none;
+}
+.restaurant__like .heart-empty {
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+}
+.restaurant__like .heart-full {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+}
+.restaurant__like .heart-checkbox:checked + .heart-empty {
+  opacity: 0;
+}
+.restaurant__like .heart-checkbox:checked + .heart-empty + .heart-full {
+  opacity: 1;
+}
+.restaurant__like:hover .heart-empty {
+  opacity: 0;
+}
+.restaurant__like:hover .heart-full {
+  opacity: 1;
 }/*# sourceMappingURL=menu.css.map */

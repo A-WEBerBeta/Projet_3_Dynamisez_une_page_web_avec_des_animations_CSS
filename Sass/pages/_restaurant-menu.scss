@@ -31,6 +31,18 @@
     @include alignChildren(space-between);
     gap: 40px;
     padding: 0 17px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 32px;
+      background-color: $bg-color;
+      position: absolute;
+      left: 0;
+      top: -32px;
+      border-radius: 40px 40px 0 0;
+    }
   }
 
   &__restaurant {
@@ -38,8 +50,10 @@
     font-size: 1.75rem;
   }
 
-  svg {
+  .restaurant__like {
     @include centerChild;
+    font-size: 1.375rem;
+    padding-top: 4px;
     position: absolute;
     right: 41px;
   }

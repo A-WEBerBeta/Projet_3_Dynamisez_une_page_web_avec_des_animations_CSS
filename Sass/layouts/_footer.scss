@@ -41,3 +41,29 @@
     }
   }
 }
+
+@media screen and (min-width: 376px) {
+  .footer {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+    padding: 60px 26px 30px;
+    gap: 16px;
+
+    &__links {
+      flex-direction: row;
+      gap: 7px;
+    }
+
+    &__title {
+      width: 139px;
+    }
+  }
+
+  .footer__link {
+    width: 190px;
+
+    &:nth-last-child(-n + 2) {
+      width: 130px;
+    }
+  }
+}

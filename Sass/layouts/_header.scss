@@ -25,3 +25,16 @@
     border: none;
   }
 }
+
+@media screen and (min-width: 376px) {
+  .header__logo {
+    box-shadow: none;
+    height: 96px;
+    @include centerChild;
+    padding: 0;
+  }
+
+  .header__location {
+    box-shadow: none;
+  }
+}
