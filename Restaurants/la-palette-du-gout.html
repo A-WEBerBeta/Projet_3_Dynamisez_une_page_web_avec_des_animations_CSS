@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/Sass/pages/menu.css" />
   </head>
   <body class="la-palette-du-gout">
-
     <!-- **** Header **** -->
     <header>
       <!-- **** logo ****  -->
@@ -27,7 +26,6 @@
     </header>
 
     <main>
-
       <!-- **** Image restaurant **** -->
       <div class="hero__image">
         <img
@@ -37,14 +35,17 @@
       </div>
 
       <section class="menu">
-
         <!-- **** Titre + Like **** -->
         <div class="menu__container">
           <h2 class="menu__restaurant">La palette du goût</h2>
           <div class="restaurant__like">
-            <input type="checkbox" id="like" class="heart-checkbox">
-            <label for="like" class="heart-empty"><i class="fa-regular fa-heart"></i></label>
-            <label for="like" class="heart-full"><i class="fa-solid fa-heart"></i></label>
+            <input type="checkbox" id="like" class="heart-checkbox" />
+            <label for="like" class="heart-empty"
+              ><i class="fa-regular fa-heart"></i
+            ></label>
+            <label for="like" class="heart-full"
+              ><i class="fa-solid fa-heart"></i
+            ></label>
           </div>
         </div>
 
@@ -52,6 +53,7 @@
         <div class="menu__content">
           <h3 class="menu__title">Entrées</h3>
           <div class="menu__cards">
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Fricassée d'escargots</h4>
@@ -60,9 +62,11 @@
               <div class="menu__price">
                 <h4>25€</h4>
               </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
+              </div>
             </a>
-            
-
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Foie gras de canard mi-cuit</h4>
@@ -71,14 +75,23 @@
               <div class="menu__price">
                 <h4>35€</h4>
               </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
+              </div>
             </a>
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Œuf au plat</h4>
-                <p class="card__desc">Assaisonné à la truffe sur lit de caviar</p>
+                <p class="card__desc">
+                  Assaisonné à la truffe sur lit de caviar
+                </p>
               </div>
               <div class="menu__price">
                 <h4>25€</h4>
+              </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
               </div>
             </a>
           </div>
@@ -88,6 +101,7 @@
         <div class="menu__content">
           <h3 class="menu__title">Plats</h3>
           <div class="menu__cards">
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Filet de bœuf aux herbes</h4>
@@ -96,16 +110,26 @@
               <div class="menu__price">
                 <h4>40€</h4>
               </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
+              </div>
             </a>
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Parmentier de queue de bœuf</h4>
-                <p class="card__desc">À la truffe noire sur sa purée de panais</p>
+                <p class="card__desc">
+                  À la truffe noire sur sa purée de panais
+                </p>
               </div>
               <div class="menu__price">
                 <h4>35€</h4>
               </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
+              </div>
             </a>
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Filet de turbot</h4>
@@ -113,6 +137,9 @@
               </div>
               <div class="menu__price">
                 <h4>44€</h4>
+              </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
               </div>
             </a>
           </div>
@@ -122,6 +149,7 @@
         <div class="menu__content">
           <h3 class="menu__title">Desserts</h3>
           <div class="menu__cards">
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Paris-Brest</h4>
@@ -130,7 +158,11 @@
               <div class="menu__price">
                 <h4>18€</h4>
               </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
+              </div>
             </a>
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Macaron au chocolat d'exception</h4>
@@ -139,14 +171,23 @@
               <div class="menu__price">
                 <h4>22€</h4>
               </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
+              </div>
             </a>
+            <!-- **** -->
             <a href="#">
               <div class="menu__card">
                 <h4 class="card__title">Mousse au chocolat</h4>
-                <p class="card__desc">Au piment d'Espelette et à la truffe noire</p>
+                <p class="card__desc">
+                  Au piment d'Espelette et à la truffe noire
+                </p>
               </div>
               <div class="menu__price">
                 <h4>23€</h4>
+              </div>
+              <div class="color-box">
+                <i class="fa-solid fa-circle-check check-icon"></i>
               </div>
             </a>
           </div>
@@ -156,24 +197,30 @@
     </main>
 
     <!-- **** Footer **** -->
-  <footer class="footer">
-    <h4 class="footer__title">ohmyfood</h4>
-    <div class="footer__links">
-      <div class="footer__link">
-        <i class="fa-solid fa-utensils"></i>
-        <a href="#" class="link__title">Proposer un restaurant</a>
+    <footer class="footer">
+      <h4 class="footer__title">ohmyfood</h4>
+      <div class="footer__links">
+        <div class="footer__link">
+          <i class="fa-solid fa-utensils"></i>
+          <a href="#" class="link__title">Proposer un restaurant</a>
+        </div>
+        <div class="footer__link">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <a href="#" class="link__title">Devenir partenaire</a>
+        </div>
+        <div class="footer__link">
+          <a href="#" class="link__title link__title--regular"
+            >Mentions légales</a
+          >
+        </div>
+        <div class="footer__link">
+          <a
+            href="mailto:contact@contact.com"
+            class="link__title link__title--regular"
+            >Contact</a
+          >
+        </div>
       </div>
-      <div class="footer__link">
-        <i class="fa-solid fa-handshake-angle"></i>
-        <a href="#" class="link__title">Devenir partenaire</a>
-      </div>
-      <div class="footer__link">
-        <a href="#" class="link__title link__title--regular">Mentions légales</a>
-      </div>
-      <div class="footer__link">
-        <a href="mailto:contact@contact.com" class="link__title link__title--regular">Contact</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
   </body>
 </html>
