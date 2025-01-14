@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ohmyfood</title>
-  <!-- **** fontawesome **** -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" >
-  <!-- **** css **** -->
-   <link rel="stylesheet" href="./Sass/index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohmyfood</title>
+    <!-- **** fontawesome **** -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- **** css **** -->
+    <link rel="stylesheet" href="./Sass/index.css" />
+  </head>
 
-  <header>
-    <!-- **** logo ****  -->
-     <div class="header">
-      <h1 class="header__logo">ohmyfood</h1>
-     </div>
-     <!-- **** Localisation **** -->
-     <div class="header__location">
-       <div class="location__icon">
-         <i class="fa-solid fa-location-dot"></i>
-       </div>
-       <p class="location__search">Paris, Belleville</p>
-     </div>
-  </header>
+  <body>
+    <header>
+      <!-- **** logo ****  -->
+      <div class="header">
+        <h1 class="header__logo">ohmyfood</h1>
+      </div>
+      <!-- **** Localisation **** -->
+      <div class="header__location">
+        <div class="location__icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <p class="location__search">Paris, Belleville</p>
+      </div>
+    </header>
 
-  <main>
-    <!-- **** Header Hero **** -->
-    <section class="hero">
+    <main>
+      <!-- **** Header Hero **** -->
+      <section class="hero">
         <h2 class="hero__title">Réservez le menu qui vous convient</h2>
-        <p class="hero__desc">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="btn"><a href="#restaurants">Explorer nos restaurants</a></button>
-    </section>
+        <p class="hero__desc">
+          Découvrez des restaurants d'exception, sélectionnés par nos soins.
+        </p>
+        <a href="#restaurants" class="btn">Explorer nos restaurants</a>
+      </section>
 
-    <!-- **** Operation / Fonctionnement **** -->
-     <section class="operation">
-      <h2 class="operation__title">Fonctionnement</h2>
+      <!-- **** Operation / Fonctionnement **** -->
+      <section class="operation">
+        <h2 class="operation__title">Fonctionnement</h2>
 
-      <div class="operation__steps">
-      <!-- **** Step 1 **** -->
-      <div class="operation__step">
-        <div class="operation__number">1</div>
-        <div class="operation__desc">
-          <div class="operation__icon">
-            <i class="fa-solid fa-mobile-screen-button"></i>
+        <div class="operation__steps">
+          <!-- **** Step 1 **** -->
+          <div class="operation__step">
+            <div class="operation__number">1</div>
+            <div class="operation__desc">
+              <div class="operation__icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <p class="operation__text">Choisissez un restaurant</p>
+            </div>
           </div>
-          <p class="operation__text">Choisissez un restaurant</p>
-        </div>
-      </div>
 
-      <!-- **** Step 2 **** -->
-      <div class="operation__step">
-        <div class="operation__number">2</div>
-        <div class="operation__desc">
-          <div class="operation__icon">
-            <i class="fa-solid fa-list-ul"></i>
+          <!-- **** Step 2 **** -->
+          <div class="operation__step">
+            <div class="operation__number">2</div>
+            <div class="operation__desc">
+              <div class="operation__icon">
+                <i class="fa-solid fa-list-ul"></i>
+              </div>
+              <p class="operation__text">Composez votre menu</p>
+            </div>
           </div>
-          <p class="operation__text">Composez votre menu</p>
-        </div>
-      </div>
 
-      <!-- **** Step 3 **** -->
-      <div class="operation__step">
-        <div class="operation__number">3</div>
-        <div class="operation__desc">
-          <div class="operation__icon operation__icon--primary">
-           <i class="fa-solid fa-store"></i>
+          <!-- **** Step 3 **** -->
+          <div class="operation__step">
+            <div class="operation__number">3</div>
+            <div class="operation__desc">
+              <div class="operation__icon operation__icon--primary">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <p class="operation__text">Dégustez au restaurant</p>
+            </div>
           </div>
-          <p class="operation__text">Dégustez au restaurant</p>
         </div>
-      </div>
-    </div>
-     </section>
-     
+      </section>
 
-     <!-- **** Restaurants **** -->
+      <!-- **** Restaurants **** -->
       <section class="restaurants" id="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
-        <div class="restaurants__cards">
 
+        <div class="restaurants__cards">
           <!-- **** Card 1 **** -->
           <a href="/Restaurants/la-palette-du-gout.html">
             <div class="restaurant__card">
               <div class="restaurant__card-image">
-                <img src="/Assets/images/restaurants/La-palette-du-gout.jpg" alt="photographie d'un plat au restaurant La palette du goût">
+                <img
+                  src="/Assets/images/restaurants/La-palette-du-gout.jpg"
+                  alt="photographie d'un plat au restaurant La palette du goût"
+                />
                 <p class="restaurant__card-new">Nouveau</p>
               </div>
               <div class="restaurant__container">
@@ -92,9 +99,13 @@
                   <p class="restaurant__desc-location">Ménilmontant</p>
                 </div>
                 <div class="restaurant__like">
-                  <input type="checkbox" id="like" class="heart-checkbox">
-                  <label for="like" class="heart-empty"><i class="fa-regular fa-heart"></i></label>
-                  <label for="like" class="heart-full"><i class="fa-solid fa-heart"></i></label>
+                  <input type="checkbox" id="like" class="heart-checkbox" />
+                  <label for="like" class="heart-empty"
+                    ><i class="fa-regular fa-heart"></i
+                  ></label>
+                  <label for="like" class="heart-full"
+                    ><i class="fa-solid fa-heart"></i
+                  ></label>
                 </div>
               </div>
             </div>
@@ -104,7 +115,11 @@
           <a href="/Restaurants/la_note-enchantée.html">
             <div class="restaurant__card">
               <div class="restaurant__card-image">
-                <img src="/Assets/images/restaurants/La-note-enchantée.jpg" alt="photographie d'un plat au restaurant La note enchantée" id="center-img">
+                <img
+                  src="/Assets/images/restaurants/La-note-enchantée.jpg"
+                  alt="photographie d'un plat au restaurant La note enchantée"
+                  id="center-img"
+                />
                 <p class="restaurant__card-new">Nouveau</p>
               </div>
               <div class="restaurant__container">
@@ -113,9 +128,13 @@
                   <p class="restaurant__desc-location">Charonne</p>
                 </div>
                 <div class="restaurant__like">
-                  <input type="checkbox" id="like2" class="heart-checkbox">
-                  <label for="like2" class="heart-empty"><i class="fa-regular fa-heart"></i></label>
-                  <label for="like2" class="heart-full"><i class="fa-solid fa-heart"></i></label>
+                  <input type="checkbox" id="like2" class="heart-checkbox" />
+                  <label for="like2" class="heart-empty"
+                    ><i class="fa-regular fa-heart"></i
+                  ></label>
+                  <label for="like2" class="heart-full"
+                    ><i class="fa-solid fa-heart"></i
+                  ></label>
                 </div>
               </div>
             </div>
@@ -125,7 +144,10 @@
           <a href="/Restaurants/à-la-française.html">
             <div class="restaurant__card">
               <div class="restaurant__card-image">
-                <img src="/Assets/images/restaurants/A-la-française.jpg" alt="photographie d'un plat au restaurant À la française">
+                <img
+                  src="/Assets/images/restaurants/A-la-française.jpg"
+                  alt="photographie d'un plat au restaurant À la française"
+                />
               </div>
               <div class="restaurant__container">
                 <div class="restaurant__desc">
@@ -133,9 +155,13 @@
                   <p class="restaurant__desc-location">Cité Rouge</p>
                 </div>
                 <div class="restaurant__like">
-                  <input type="checkbox" id="like3" class="heart-checkbox">
-                  <label for="like3" class="heart-empty"><i class="fa-regular fa-heart"></i></label>
-                  <label for="like3" class="heart-full"><i class="fa-solid fa-heart"></i></label>
+                  <input type="checkbox" id="like3" class="heart-checkbox" />
+                  <label for="like3" class="heart-empty"
+                    ><i class="fa-regular fa-heart"></i
+                  ></label>
+                  <label for="like3" class="heart-full"
+                    ><i class="fa-solid fa-heart"></i
+                  ></label>
                 </div>
               </div>
             </div>
@@ -145,7 +171,10 @@
           <a href="/Restaurants/le-délice-des-sens.html">
             <div class="restaurant__card">
               <div class="restaurant__card-image">
-                <img src="/Assets/images/restaurants/Le-délice-des-sens.jpg" alt="photographie d'un plat au restaurant Le délice des sens">
+                <img
+                  src="/Assets/images/restaurants/Le-délice-des-sens.jpg"
+                  alt="photographie d'un plat au restaurant Le délice des sens"
+                />
               </div>
               <div class="restaurant__container">
                 <div class="restaurant__desc">
@@ -153,37 +182,46 @@
                   <p class="restaurant__desc-location">Folie-Méricourt</p>
                 </div>
                 <div class="restaurant__like">
-                  <input type="checkbox" id="like4" class="heart-checkbox">
-                  <label for="like4" class="heart-empty"><i class="fa-regular fa-heart"></i></label>
-                  <label for="like4" class="heart-full"><i class="fa-solid fa-heart"></i></label>
+                  <input type="checkbox" id="like4" class="heart-checkbox" />
+                  <label for="like4" class="heart-empty"
+                    ><i class="fa-regular fa-heart"></i
+                  ></label>
+                  <label for="like4" class="heart-full"
+                    ><i class="fa-solid fa-heart"></i
+                  ></label>
                 </div>
               </div>
             </div>
           </a>
         </div>
       </section>
-  </main>
+    </main>
 
-  <!-- **** Footer **** -->
-  <footer class="footer">
-    <h4 class="footer__title">ohmyfood</h4>
-    <div class="footer__links">
-      <div class="footer__link">
-        <i class="fa-solid fa-utensils"></i>
-        <a href="#" class="link__title">Proposer un restaurant</a>
+    <!-- **** Footer **** -->
+    <footer class="footer">
+      <h4 class="footer__title">ohmyfood</h4>
+      <div class="footer__links">
+        <div class="footer__link">
+          <i class="fa-solid fa-utensils"></i>
+          <a href="#" class="link__title">Proposer un restaurant</a>
+        </div>
+        <div class="footer__link">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <a href="#" class="link__title">Devenir partenaire</a>
+        </div>
+        <div class="footer__link">
+          <a href="#" class="link__title link__title--regular"
+            >Mentions légales</a
+          >
+        </div>
+        <div class="footer__link">
+          <a
+            href="mailto:contact@contact.com"
+            class="link__title link__title--regular"
+            >Contact</a
+          >
+        </div>
       </div>
-      <div class="footer__link">
-        <i class="fa-solid fa-handshake-angle"></i>
-        <a href="#" class="link__title">Devenir partenaire</a href="#">
-      </div>
-      <div class="footer__link">
-        <a href="#" class="link__title link__title--regular">Mentions légales</a href="#">
-      </div>
-      <div class="footer__link">
-        <a href="mailto:contact@contact.com" class="link__title link__title--regular">Contact</a href="#">
-      </div>
-    </div>
-  </footer>
-  
-</body>
+    </footer>
+  </body>
 </html>
