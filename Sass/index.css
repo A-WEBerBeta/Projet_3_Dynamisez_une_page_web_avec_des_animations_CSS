@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
   src: url(/Assets/fonts/Shrikhand-Regular.ttf);
@@ -23,7 +24,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-weight: inherit;
+  font-weight: inherit; /* pour que les polices ne prennent pas les valeurs par défaut des navigateurs */
 }
 
 li {
@@ -246,6 +247,7 @@ body {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 18px;
+  position: relative;
 }
 .restaurant__card .restaurant__card-image {
   display: -webkit-box;
@@ -265,7 +267,7 @@ body {
 }
 .restaurant__card .restaurant__card-image #center-img {
   -o-object-position: center;
-     object-position: center; /* comment faire pour positionner l'image comme sur la maquette ? */
+     object-position: center;
 }
 .restaurant__card .restaurant__card-image .restaurant__card-new {
   position: absolute;
@@ -302,12 +304,6 @@ body {
           justify-content: space-between;
   text-align: left;
   padding: 16px 25px 12px 13px;
-}
-.restaurant__container .restaurant__like {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  padding-top: 4px;
-  font-size: 1.375rem;
 }
 
 .restaurant__desc-title {
@@ -469,8 +465,11 @@ body {
 }
 
 .restaurant__like {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  font-size: 1.4rem;
+  bottom: 30px;
+  right: 25px;
 }
 .restaurant__like .heart-checkbox {
   display: none;
@@ -487,7 +486,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  top: 4px;
+  top: 0;
   left: 0;
   opacity: 0;
   -webkit-transition: all 800ms ease-in-out;

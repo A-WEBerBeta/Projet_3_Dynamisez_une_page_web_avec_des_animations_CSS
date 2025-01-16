@@ -24,7 +24,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-weight: inherit;
+  font-weight: inherit; /* pour que les polices ne prennent pas les valeurs par défaut des navigateurs */
 }
 
 li {
@@ -396,8 +396,11 @@ body.la-palette-du-gout .footer {
   }
 }
 .restaurant__like {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  font-size: 1.4rem;
+  bottom: 30px;
+  right: 25px;
 }
 .restaurant__like .heart-checkbox {
   display: none;
@@ -414,7 +417,7 @@ body.la-palette-du-gout .footer {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  top: 4px;
+  top: 0;
   left: 0;
   opacity: 0;
   -webkit-transition: all 800ms ease-in-out;

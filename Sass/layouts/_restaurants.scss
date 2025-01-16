@@ -14,6 +14,7 @@
   background-color: white;
   border-radius: 15px;
   margin-bottom: 18px;
+  position: relative;
 
   .restaurant__card-image {
     display: flex;
@@ -29,7 +30,7 @@
     }
 
     #center-img {
-      object-position: center; /* comment faire pour positionner l'image comme sur la maquette ? */
+      object-position: center;
     }
 
     .restaurant__card-new {
@@ -54,11 +55,11 @@
   text-align: left;
   padding: 16px 25px 12px 13px;
 
-  .restaurant__like {
-    align-self: flex-start;
-    padding-top: 4px;
-    font-size: 1.375rem;
-  }
+  // .restaurant__like {
+  //   // align-self: flex-start;
+  //   // padding-top: 4px;
+  //   // font-size: 1.375rem;
+  // }
 }
 
 .restaurant__desc {

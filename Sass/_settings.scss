@@ -58,7 +58,7 @@ $tertiary-color: #99e2d0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: inherit;
+  font-weight: inherit; /* pour que les polices ne prennent pas les valeurs par défaut des navigateurs */
 }
 
 li {
