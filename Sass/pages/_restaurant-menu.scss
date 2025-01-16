@@ -1,3 +1,4 @@
+// **** HEADER ****
 .header__logo {
   font-family: $font-title;
   font-size: 1.875rem;
@@ -17,17 +18,19 @@
   color: #353535;
 }
 
+// **** IMAGE RESTAURANT ****
 .hero__image img {
   width: 100%;
-  height: 275px;
+  height: 252px;
   object-fit: cover;
 }
 
+// **** MENU TITRE + LIKE ****
 .menu {
   @include flexColumn;
   gap: 40px;
 
-  &__container {
+  &__head {
     @include alignChildren(space-between);
     gap: 40px;
     padding: 0 17px;
@@ -51,18 +54,22 @@
   }
 
   .restaurant__like {
-    @include centerChild;
-    font-size: 1.375rem;
-    padding-top: 4px;
-    position: absolute;
+    top: 8px;
     right: 41px;
   }
 }
 
-.menu__content {
+// **** FORMULAIRE ****
+form {
   @include flexColumn;
   text-align: left;
   padding: 0 13px;
+  gap: 40px;
+}
+
+// **** Entrées / Plats / Dessert ****
+.menu__content {
+  @include flexColumn;
   gap: 12px;
 
   .menu__title {
@@ -84,11 +91,12 @@
   }
 }
 
+// **** Items ****
 .menu__cards {
   @include flexColumn;
   gap: 12px;
 
-  a {
+  label {
     height: 69px;
     width: 100%;
     background-color: white;
@@ -98,19 +106,31 @@
     @include alignChildren(space-between);
     overflow: hidden;
     position: relative;
+    cursor: pointer;
+    opacity: 0;
 
-    &:hover {
+    &:hover,
+    .item-checkbox:checked + .menu__container {
       .color-box {
         transform: translateX(-59px);
       }
       .menu__price {
-        margin-right: 59px;
+        transform: translateX(-59px);
       }
       .menu__card {
         width: calc(100% - 100px);
       }
     }
   }
+
+  .item-checkbox {
+    display: none;
+  }
+}
+
+.menu__container {
+  @include alignChildren(space-between);
+  width: 100%;
 }
 
 .color-box {
@@ -124,7 +144,7 @@
   border-radius: 0 15px 15px 0;
 
   overflow: hidden;
-  transition: all 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 
   .check-icon {
     color: white;
@@ -135,7 +155,7 @@
 .menu__card {
   width: 100%;
 
-  transition: all 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
 
   .card__title {
     font-family: $font-medium;
@@ -151,8 +171,8 @@
     font-family: $font-light;
     font-size: 0.94rem;
     max-width: 100%;
-    white-space: nowrap; /* Pas de passage à la ligne */
-    overflow: hidden; /* Masque le débordement */
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
 }
@@ -162,7 +182,7 @@
   font-size: 0.94rem;
   align-self: flex-end;
 
-  transition: all 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 
 .btn {
@@ -170,6 +190,52 @@
   align-self: center;
 }
 
-body.la-palette-du-gout .footer {
+body.restaurant .footer {
   margin-top: 40px;
+}
+
+// **** ANIMATION ****
+.dish {
+  animation: fade 800ms forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.entrees .dish:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.entrees .dish:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.entrees .dish:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.entrees .dish:nth-child(4) {
+  animation-delay: 1.1s;
+}
+.plats .dish:nth-child(1) {
+  animation-delay: 1.1s;
+}
+.plats .dish:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.plats .dish:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.desserts .dish:nth-child(1) {
+  animation-delay: 1.7s;
+}
+.desserts .dish:nth-child(2) {
+  animation-delay: 1.9s;
+}
+.desserts .dish:nth-child(3) {
+  animation-delay: 2.1s;
 }
