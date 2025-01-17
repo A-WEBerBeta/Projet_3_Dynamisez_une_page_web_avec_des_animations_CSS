@@ -1,10 +1,14 @@
 // **** HEADER ****
-.header__logo {
-  font-family: $font-title;
-  font-size: 1.875rem;
-  width: 100%;
-  padding: 14px 0 5px;
-  position: relative;
+header {
+  background-color: white;
+
+  .header__logo {
+    font-family: $font-title;
+    font-size: 1.875rem;
+    width: 100%;
+    padding: 14px 0 5px;
+    position: relative;
+  }
 }
 
 .header__return {
@@ -18,6 +22,19 @@
   color: #353535;
 }
 
+@media screen and (min-width: 700px) {
+  .header__logo {
+    box-shadow: none;
+    height: 96px;
+    @include centerChild;
+    padding: 0;
+  }
+
+  .header__return {
+    top: 33px;
+  }
+}
+
 // **** IMAGE RESTAURANT ****
 .hero__image img {
   width: 100%;
@@ -25,10 +42,20 @@
   object-fit: cover;
 }
 
+@media screen and (min-width: 700px) {
+  .hero__image img {
+    height: auto;
+    max-height: 385px;
+  }
+}
+
 // **** MENU TITRE + LIKE ****
 .menu {
   @include flexColumn;
   gap: 40px;
+  max-width: 1055px;
+  margin: 0 auto;
+  background-color: $bg-color;
 
   &__head {
     @include alignChildren(space-between);
@@ -59,12 +86,28 @@
   }
 }
 
+@media screen and (min-width: 700px) {
+  .menu {
+    &__head {
+      @include centerChild;
+    }
+  }
+}
+
 // **** FORMULAIRE ****
 form {
   @include flexColumn;
   text-align: left;
   padding: 0 13px;
   gap: 40px;
+}
+
+@media screen and (min-width: 700px) {
+  form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 // **** Entrées / Plats / Dessert ****
@@ -188,10 +231,15 @@ form {
 .btn {
   max-width: 186px;
   align-self: center;
+  margin-bottom: 40px;
 }
 
-body.restaurant .footer {
-  margin-top: 40px;
+body.restaurant {
+  background-color: white;
+
+  .footer {
+    margin-top: 0;
+  }
 }
 
 // **** ANIMATION ****

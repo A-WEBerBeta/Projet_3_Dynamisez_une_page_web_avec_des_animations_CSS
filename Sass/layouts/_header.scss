@@ -1,11 +1,15 @@
-.header__logo {
-  font-family: $font-title;
-  font-size: 1.875rem;
-  width: 100%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-  padding: 14px 0 5px;
-  position: relative;
-  z-index: 2;
+header {
+  background-color: white;
+
+  .header__logo {
+    font-family: $font-title;
+    font-size: 1.875rem;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 14px 0 5px;
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .header__location {
@@ -26,15 +30,19 @@
   }
 }
 
-@media screen and (min-width: 376px) {
-  .header__logo {
-    box-shadow: none;
-    height: 96px;
-    @include centerChild;
-    padding: 0;
-  }
+// **** MEDIA QUERIES ****
 
-  .header__location {
-    box-shadow: none;
+@media screen and (min-width: 700px) {
+  header {
+    .header__logo {
+      box-shadow: none;
+      height: 96px;
+      @include centerChild;
+      padding: 0;
+    }
+
+    .header__location {
+      box-shadow: none;
+    }
   }
 }
