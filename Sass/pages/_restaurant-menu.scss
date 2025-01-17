@@ -24,7 +24,7 @@ header {
 
 @media screen and (min-width: 700px) {
   .header__logo {
-    box-shadow: none;
+    // box-shadow: none;
     height: 96px;
     @include centerChild;
     padding: 0;

@@ -7,7 +7,6 @@
   backdrop-filter: blur(4px);
   background-color: #f6f6f6af;
   z-index: 100;
-  cursor: wait;
 
   animation: loading 3s forwards;
 
@@ -34,6 +33,7 @@
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
