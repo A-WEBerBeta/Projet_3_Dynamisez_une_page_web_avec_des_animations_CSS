@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../Assets/fonts/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../../Assets/fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../../Assets/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../../Assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../Assets/fonts/Roboto-Regular.ttf);
+}
+
+// **** Var FONTS ****
+
+$font-title: Shrikhand;
+$font-light: Roboto-Light;
+$font-medium: Roboto-Medium;
+$font-bold: Roboto-Bold;
+
+// **** Var COLORS ****
+
+$bg-color: #f6f6f6;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+
+// **** MIXINS ****
+
+@mixin centerChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin alignChildren($space) {
+  display: flex;
+  align-items: center;
+  justify-content: $space;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+// **** GENERAL ****
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: inherit; /* pour que les polices ne prennent pas les valeurs par défaut des navigateurs */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  background-color: $bg-color;
+  user-select: none;
+  position: relative;
+}
