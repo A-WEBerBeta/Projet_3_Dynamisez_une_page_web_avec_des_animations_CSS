@@ -92,6 +92,11 @@ header {
       @include centerChild;
     }
   }
+
+  .menu__head::before {
+    height: 51px;
+    top: -51px;
+  }
 }
 
 // **** FORMULAIRE ****

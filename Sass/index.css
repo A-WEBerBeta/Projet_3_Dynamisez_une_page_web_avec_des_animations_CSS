@@ -321,6 +321,9 @@ header .header__logo {
   font-size: 1.5rem;
   margin-bottom: 26px;
 }
+.operation__steps {
+  counter-reset: stepCounter;
+}
 .operation__step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,6 +337,7 @@ header .header__logo {
   max-width: 335px;
   margin: 0 auto;
   margin-bottom: 25px;
+  counter-increment: stepCounter;
 }
 .operation__step .operation__number {
   background-color: #9356dc;
@@ -353,6 +357,9 @@ header .header__logo {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+}
+.operation__step .operation__number::before {
+  content: counter(stepCounter);
 }
 .operation__step .operation__desc {
   background-color: #f6f6f6;

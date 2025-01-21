@@ -166,6 +166,10 @@ header .header__logo {
         -ms-flex-align: center;
             align-items: center;
   }
+  .menu__head::before {
+    height: 51px;
+    top: -51px;
+  }
 }
 form {
   display: -webkit-box;

@@ -10,11 +10,16 @@
     margin-bottom: 26px;
   }
 
+  &__steps {
+    counter-reset: stepCounter;
+  }
+
   &__step {
     @include centerChild;
     max-width: 335px;
     margin: 0 auto;
     margin-bottom: 25px;
+    counter-increment: stepCounter;
 
     .operation__number {
       background-color: $primary-color;
@@ -26,6 +31,10 @@
       color: white;
       @include centerChild;
       z-index: 2;
+
+      &::before {
+        content: counter(stepCounter);
+      }
     }
 
     .operation__desc {
