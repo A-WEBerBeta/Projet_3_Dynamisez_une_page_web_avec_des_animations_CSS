@@ -144,7 +144,8 @@ form {
   @include flexColumn;
   gap: 12px;
 
-  label {
+  .menu__card {
+    position: relative;
     height: 69px;
     width: 100%;
     background-color: white;
@@ -153,7 +154,6 @@ form {
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
     @include alignChildren(space-between);
     overflow: hidden;
-    position: relative;
     cursor: pointer;
     opacity: 0;
 
@@ -165,10 +165,17 @@ form {
       .menu__price {
         transform: translateX(-59px);
       }
-      .menu__card {
+      .menu__text {
         width: calc(100% - 100px);
       }
     }
+  }
+
+  .dish {
+    position: absolute;
+    inset: 0; /* couvre toute la surface de la card */
+    z-index: 1;
+    cursor: pointer;
   }
 
   .item-checkbox {
@@ -200,7 +207,7 @@ form {
   }
 }
 
-.menu__card {
+.menu__text {
   width: 100%;
 
   transition: width 300ms ease-in-out;
@@ -248,7 +255,7 @@ body.restaurant {
 }
 
 // **** ANIMATION ****
-.dish {
+.menu__card {
   animation: fade 800ms forwards;
 }
 
@@ -262,33 +269,33 @@ body.restaurant {
   }
 }
 
-.entrees .dish:nth-child(1) {
+.entrees .menu__card:nth-child(1) {
   animation-delay: 0.5s;
 }
-.entrees .dish:nth-child(2) {
+.entrees .menu__card:nth-child(2) {
   animation-delay: 0.7s;
 }
-.entrees .dish:nth-child(3) {
+.entrees .menu__card:nth-child(3) {
   animation-delay: 0.9s;
 }
-.entrees .dish:nth-child(4) {
+.entrees .menu__card:nth-child(4) {
   animation-delay: 1.1s;
 }
-.plats .dish:nth-child(1) {
+.plats .menu__card:nth-child(1) {
   animation-delay: 1.1s;
 }
-.plats .dish:nth-child(2) {
+.plats .menu__card:nth-child(2) {
   animation-delay: 1.3s;
 }
-.plats .dish:nth-child(3) {
+.plats .menu__card:nth-child(3) {
   animation-delay: 1.5s;
 }
-.desserts .dish:nth-child(1) {
+.desserts .menu__card:nth-child(1) {
   animation-delay: 1.7s;
 }
-.desserts .dish:nth-child(2) {
+.desserts .menu__card:nth-child(2) {
   animation-delay: 1.9s;
 }
-.desserts .dish:nth-child(3) {
+.desserts .menu__card:nth-child(3) {
   animation-delay: 2.1s;
 }
