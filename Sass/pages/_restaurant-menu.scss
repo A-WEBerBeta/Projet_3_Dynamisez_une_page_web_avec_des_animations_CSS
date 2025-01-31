@@ -81,8 +81,9 @@ header {
   }
 
   .restaurant__like {
-    top: 8px;
-    right: 41px;
+    position: relative;
+    bottom: 0;
+    right: 24px;
   }
 }
 
@@ -90,6 +91,10 @@ header {
   .menu {
     &__head {
       @include centerChild;
+    }
+
+    .restaurant__like {
+      right: 16px;
     }
   }
 
